@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Password</title>
+</head>
+
+<body>
+    <input type="password" name="" id="pass">
+    <button id="btn"> show</button>
+</body>
+<script>
+    let passEle = document.querySelector('#pass')
+    let btnEle = document.querySelector('#btn')
+
+    let isShow = false;
+
+    function handlerBtn() {
+        if (isShow) {
+            passEle.setAttribute("type", "text")
+            isShow = !isShow
+        }
+        else {
+            passEle.setAttribute("type", "password")
+            isShow = !isShow
+        }
+
+    }
+    btnEle.addEventListener('click', handlerBtn);
+
+</script>
+
+</html>
